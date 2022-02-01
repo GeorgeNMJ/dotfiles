@@ -47,11 +47,11 @@ set smartcase
 let g:indexed_search_shortmess=1
 
 " tmux truecolor feature
-if (empty($TMUX))
-  if (has("termguicolors"))
-    set termguicolors
-  endif
-endif
+" if (empty($TMUX))
+"   if (has("termguicolors"))
+"     set termguicolors
+"   endif
+" endif
 
 " allow mouse clicks
 set mouse=a
@@ -61,4 +61,12 @@ set mouse=a
 "   set ttymouse=sgr
 " endif
 
+""""""""""""""""""""
+""" Key bindings """ 
+""""""""""""""""""""
+let mapleader = " "
 
+noremap <Leader>y "+y
+noremap <Leader>p "+p
+noremap <Leader>Y "*y
+noremap <Leader>P "*p
