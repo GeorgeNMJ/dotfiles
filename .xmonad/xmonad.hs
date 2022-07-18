@@ -253,7 +253,7 @@ myManageHook = composeAll
     , className =? "Gimp"           --> doFloat
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore 
-    , (className =? "firefox" <&&> resource =? "Dialog") --> doFloat
+    , (className =? "firefox" <&&> resource =? "Places") --> doFloat
     , className =? "code"		    --> doFloat
 	, className =? "firefox"		--> viewShift "www"
     , className =? "discord"        --> viewShift "gg"
@@ -361,7 +361,7 @@ defaults =  def {
 
       -- hooks, layouts
         layoutHook         = myLayout,
-        manageHook         = myManageHook, 
+        manageHook         = myManageHook <+> ManageDocks, 
         handleEventHook    = myEventHook,
         logHook            = myLogHook, 
         startupHook        = myStartupHook
