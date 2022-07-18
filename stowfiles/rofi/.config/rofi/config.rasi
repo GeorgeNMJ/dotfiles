@@ -1,0 +1,42 @@
+configuration {
+	modi: "window,drun,combi";
+	show-icons: true;
+	terminal: "alacritty";
+	icon-theme: "Vimix-Black";
+	drun-display-format: "{name}";
+	combi-modi: "drun";
+/*  display-window: ""; */
+    display-drun: ""; 
+    kb-remove-to-eol: ""; 
+	kb-accept-entry: "Return";
+	kb-row-up: "Up,Control+k";
+	kb-row-down: "Down,Control+j";
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
+}
+
+@import "~/.config/rofi/arc_dark_transparent_colors.rasi"
+window {
+    background-color:               @background;
+    border:                         0;
+    padding:                        10;
+    transparency:                   "real";
+/*y-offset:                       18;*/
+/*x-offset:	                    850;*/
+    transparency:                   "real";
+}
+
+textbox {
+    text-color: @foreground;
+}
+
+listview {
+    scrollbar:                     false;
+}
+
